@@ -1,5 +1,45 @@
 # Notes - Pet Project
 
+## States
+* New Note
+* Saved Note
+* Edit Note
+
+## Buttons
+* New Note
+* Edit Note
+* Save Note
+* Cancel Edit Note
+* Delete Note
+* Disable Note
+
+## Structure
+
+Store/
+    actions/
+        actions.js
+        actionTypes.js // Constants
+    reducer/
+        noteReducer.js
+    rootReducer.js
+    index.js // Create Store
+
+## Components
+~~~~
+<Main>
+    <SidePanel>
+        Title...
+        <NoteList>
+            <NoteItem>
+    <TopPanel>
+        <Button>
+    <ViewNote>
+    <EditNote>
+    <NewNote>
+~~~~
+
+## Common
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
