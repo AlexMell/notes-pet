@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import Button from '../Button';
+import React, { PureComponent } from 'react';
+import Button from '../Buttons/Button';
 
-export default class TopPanel extends Component {
+export default class TopPanel extends PureComponent {
     render () {
         return (
             <div className="bg-light p-5 border-right w-100 d-flex border-bottom">

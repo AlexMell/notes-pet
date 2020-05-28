@@ -1,16 +1,34 @@
-const reducer = (state = 15, action) => {
+import store from '../store';
+
+const reducer = (state = store, action) => {
     switch (action.type) {
-    case 'RND':
-        return state + action.payload;
+        case 'RND':
+            return {
+                ...state,
+                counter: state.counter + action.payload,
+            };
 
-    case 'INC':
-        return state + 1;
+        case 'INC':
+            return {
+                ...state,
+                counter: state.counter - action.payload,
+            };
 
-    case 'DEC':
-        return state - 1;
+        case 'DEC':
+            return {
+                ...state,
+                counter: state.counter + action.payload,
+            };
 
-    default:
-        return state;
+        case 'MLT':
+            return {
+                ...state,
+                counter: state.counter * action.payload,
+            };
+
+        default: {
+            return state;
+        }
     }
 };
 

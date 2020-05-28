@@ -14,7 +14,7 @@
 * Disable Note
 
 ## Structure
-
+~~~
 Store/
     actions/
         actions.js
@@ -23,6 +23,7 @@ Store/
         noteReducer.js
     rootReducer.js
     index.js // Create Store
+~~~
 
 ## Components
 ~~~~
