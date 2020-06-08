@@ -1,13 +1,12 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions/actions';
-import SetZeroButton from './SetZeroButton';
 
 export class Counter extends PureComponent {
     render() {
 
-        const { counter, inc, dec, rnd, mlt } = this.props;
-        console.log(this.props);
+        const { counter, currentNoteMode, inc, dec, rnd, mlt, huy } = this.props;
+        console.log('this.props', this.props);
 
         return (
             <div className="jumbotron">
@@ -47,10 +46,16 @@ export class Counter extends PureComponent {
                     >
                         Multiply
                     </button>
+                    <button
+                        id="huy"
+                        type="submit"
+                        className="btn btn-primary btn-lg mr-2"
+                        onClick={huy}
+                    >
+                        huy
+                    </button>
                 </div>
-                <div className="row">
-                    <SetZeroButton />
-                </div>
+                <h3>{currentNoteMode}</h3>
             </div>
         );
     }
@@ -59,7 +64,8 @@ export class Counter extends PureComponent {
 const mapStateToProps = (store) => {
     return {
         counter: store.counter,
+        currentNoteMode: store.currentNoteMode
     };
 };
 
-export default connect(mapStateToProps, actions)(Counter);
+export default connect(mapStateToProps)(ButtonNewNote);

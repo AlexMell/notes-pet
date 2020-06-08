@@ -1,6 +1,10 @@
 .ItemLinkStyle {
     border-top: 1px solid #ccc;
-    padding: 25px 15px;
+    padding: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
     cursor: pointer;
     transition: .2s all;
     width: 100%;

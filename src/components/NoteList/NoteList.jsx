@@ -6,13 +6,6 @@ export default class NoteList extends Component {
         return (
             <div className="row">
                 <NoteItem />
-                <NoteItem />
-                <NoteItem />
-                <NoteItem />
-                <NoteItem />
-                <NoteItem />
-                <NoteItem />
-                <NoteItem />
             </div>
         )
     }
