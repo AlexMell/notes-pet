@@ -1,27 +1,18 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../../actions/actions';
 
-export class ButtonEditNote extends PureComponent {
+export default class ButtonEditNote extends PureComponent {
     render() {
-        const { edit } = this.props;
+        
+        const { editNote } = this.props;
 
         return (
             <button
                 type="submit"
                 className="btn btn-primary mr-2 d-flex"
-                onClick={edit}
+                onClick={editNote}
             >
                 <span className="material-icons">create</span>
             </button>
         );
     }
-}
-
-const mapStateToProps = (store) => {
-    return {
-        currentNoteMode: store.currentNoteMode,
-    };
 };
-
-export default connect(mapStateToProps, actions)(ButtonEditNote);

@@ -1,70 +1,40 @@
-export const inc = () => {
-    return {
-        type: 'INC',
-        payload: 1,
-    };
-};
-
-
-export const dec = () => {
-    return {
-        type: 'DEC',
-        payload: 1,
-    };
-};
-
-export const rnd = () => {
-    return {
-        type: 'RND',
-        payload: Math.floor(Math.random() * 10),
-    };
-};
-
-export const mlt = () => {
-    return {
-        type: "MLT",
-        payload: 2,
-    };
-};
-
-export const edit = () => {
+export const editAction = () => {
     return {
         type: "EDIT",
         payload: 'edit',
     };
 };
 
-export const news = () => {
+export const newNoteAction = () => {
     return {
         type: "NEW",
         payload: 'new',
     };
 };
 
-export const save = () => {
+export const saveAction = () => {
     return {
         type: "SAVE",
-        payload: 'watch',
+        payload: 'view',
     };
 };
 
-export const addNewItem = (addNewItem) => {
+export const addNewItemAction = (newItem) => {
     return {
         type: "ADD_ITEM",
-        payload: addNewItem
-        ,
+        payload: newItem,
     };
 };
 
 
-export const changeTitle = (title) => {
+export const changeTitleAction = (title) => {
     return {
         type: "CHANGE_TITLE",
         payload: title,
     };
 };
 
-export const changeDescr = (descr) => {
+export const changeDescrAction = (descr) => {
     return {
         type: "CHANGE_DESCR",
         payload: descr,

@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux';
-
-export class ViewNote extends PureComponent {
+export default class ViewNote extends PureComponent {
     render() {
+        
         const { title, id, descr } = this.props;
 
         return (
@@ -16,14 +15,4 @@ export class ViewNote extends PureComponent {
             </div>
         );
     }
-}
-
-const mapStateToProps = (store) => {
-    return {
-        title: store.currentNoteObj.title,
-        id: store.currentNoteObj.id,
-        descr: store.currentNoteObj.descr,
-    };
 };
-
-export default connect(mapStateToProps)(ViewNote);

@@ -2,16 +2,25 @@ import React, { PureComponent } from 'react';
 
 export default class NewNote extends PureComponent {
     render() {
+        
+        const { title, id, descr } = this.props;
+
         return (
             <div className="p-5 w-100">
-                <h2 className="pb-5">Title</h2>
-                <textarea
-                    id=""
-                    cols="30"
-                    rows="10"
-                    className="w-100 d-block"
-                    defaultValue="VAM HUY"
+                <div className="mb-2">Title of Note:</div>
+                <input
+                    type="text"
+                    value={title}
+                    className="pb-5 form-control mb-5"
+                    placeholder="Type Title Note here"
                 />
+                <div className="mb-2">Description of Note:</div>
+                <textarea
+                    id={id}
+                    cols="40"
+                    rows="20"
+                    className="w-100 d-block form-control"
+                    defaultValue={descr} />
             </div>
         );
     }

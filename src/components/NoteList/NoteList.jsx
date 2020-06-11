@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import NoteItem from '../NoteItem/NoteItem';
 
 export default class NoteList extends Component {
-    render () {
+    render() {
+        const { notes } = this.props;
+
         return (
             <div className="row">
-                <NoteItem />
+                <NoteItem notes={notes} />
             </div>
-        )
+        );
     }
 }
