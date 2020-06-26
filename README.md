@@ -2,26 +2,22 @@
 
 ## States
 * New Note
-* Saved Note
+* View Note
 * Edit Note
 
 ## Buttons
 * New Note
 * Edit Note
 * Save Note
-* Cancel Edit Note
 * Delete Note
-* Disable Note
 
 ## Structure
 ~~~
 Store/
     actions/
         actions.js
-        actionTypes.js // Constants
     reducer/
-        noteReducer.js
-    rootReducer.js
+        reducers.js
     index.js // Create Store
 ~~~
 
@@ -33,7 +29,10 @@ Store/
         <NoteList>
             <NoteItem>
     <TopPanel>
-        <Button>
+        <ButtonDeleteNote>
+        <ButtonSaveNote>
+        <ButtonEditNote>
+        <ButtonNewNote>
     <ViewNote>
     <EditNote>
     <NewNote>
