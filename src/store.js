@@ -1,15 +1,16 @@
 const store = {
-    counter: 0,
-    currentNoteMode: 'view',
+    currentNoteMode: 'new',
     currentNoteObj: {
-        title: 'Title of Note',
-        descr: 'Description of Note Description of Note Description of Note Description of Note Description of Note Description of Note Description of Note ',
+        id: '1',
+        title: 'Initial Note',
+        descr: 'Initial Description',
     },
     notes: [
         {
-            title: 'Title of Note',
-            descr: 'Description of Note Description of Note Description of Note Description of Note Description of Note Description of Note Description of Note ',
-        },
+            id: '1',
+            title: 'Initial Note',
+            descr: 'Initial Description',
+        }
     ],
 };
 

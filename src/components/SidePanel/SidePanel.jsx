@@ -4,7 +4,7 @@ import SidePanelStyles from './SidePanel.module.scss';
 
 export default class SidePanel extends PureComponent {
     render() {
-        const { currentNoteMode, notes } = this.props;
+        const { currentNoteMode, notes, transferToCurrentNote } = this.props;
 
         const { Just } = SidePanelStyles;
 
@@ -14,7 +14,7 @@ export default class SidePanel extends PureComponent {
                     Current note mode - {currentNoteMode}
                 </div>
                 <h3 className="pr-4 pt-4 pb-4">Notes list</h3>
-                <NoteList notes={notes} />
+                <NoteList notes={notes} transferToCurrentNote={transferToCurrentNote} />
             </div>
         );
     }

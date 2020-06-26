@@ -3,11 +3,11 @@ import NoteItem from '../NoteItem/NoteItem';
 
 export default class NoteList extends Component {
     render() {
-        const { notes } = this.props;
+        const { notes, transferToCurrentNote } = this.props;
 
         return (
             <div className="row">
-                <NoteItem notes={notes} />
+                <NoteItem notes={notes} transferToCurrentNote={transferToCurrentNote} />
             </div>
         );
     }

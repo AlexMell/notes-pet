@@ -22,7 +22,7 @@ export const saveAction = () => {
 export const addNewItemAction = (newItem) => {
     return {
         type: "ADD_ITEM",
-        payload: newItem,
+        payload: newItem
     };
 };
 
@@ -38,5 +38,38 @@ export const changeDescrAction = (descr) => {
     return {
         type: "CHANGE_DESCR",
         payload: descr,
+    };
+};
+
+export const transferAction = (note) => {
+    return {
+        type: "TRANSFER",
+        payload: note,
+    };
+};
+
+export const transferFirstNoteAction = () => {
+    return {
+        type: "TRANSFER_FIRST"
+    };
+};
+
+export const findAndEditAction = (id) => {
+    console.log(id);
+    return {
+        type: "FIND_AND_EDIT",
+        payload: id
+    };
+};
+
+export const findAndDeleteAction = () => {
+    return {
+        type: "FIND_AND_DELETE",
+    };
+};
+
+export const addIdToItems = () => {
+    return {
+        type: "ADD_ID",
     };
 };
