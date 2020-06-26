@@ -1,20 +1,25 @@
 import React, { PureComponent } from 'react';
 
 export default class EditNote extends PureComponent {
-
     render() {
-
-        const { title, id, descr, findAndEdit, changeTitle, changeDescr } = this.props;
+        const {
+            title,
+            id,
+            descr,
+            findAndEdit,
+            changeTitle,
+            changeDescr,
+        } = this.props;
 
         const typeTitle = (e) => {
             changeTitle(e.target.value);
             findAndEdit(id);
-        } 
+        };
 
         const typeDescr = (e) => {
             changeDescr(e.target.value);
             findAndEdit(id);
-        }
+        };
 
         return (
             <div className="p-5 w-100">
@@ -33,7 +38,8 @@ export default class EditNote extends PureComponent {
                     rows="20"
                     className="w-100 d-block form-control"
                     onChange={typeDescr}
-                    value={descr}/>
+                    value={descr}
+                />
             </div>
         );
     }

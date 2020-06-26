@@ -2,18 +2,24 @@ import React, { PureComponent } from 'react';
 
 export default class NewNote extends PureComponent {
     render() {
-        
-        const { title, id, descr, changeTitle, changeDescr, findAndEdit } = this.props;
+        const {
+            title,
+            id,
+            descr,
+            changeTitle,
+            changeDescr,
+            findAndEdit,
+        } = this.props;
 
         const typeTitle = (e) => {
             changeTitle(e.target.value);
             findAndEdit(id);
-        } 
+        };
 
         const typeDescr = (e) => {
             changeDescr(e.target.value);
             findAndEdit(id);
-        }
+        };
 
         return (
             <div className="p-5 w-100">
@@ -31,7 +37,7 @@ export default class NewNote extends PureComponent {
                     rows="20"
                     className="w-100 d-block form-control"
                     onChange={typeDescr}
-                    placeholder='Type Description Here'
+                    placeholder="Type Description Here"
                     value={descr}
                 />
             </div>

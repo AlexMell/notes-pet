@@ -67,9 +67,3 @@ export const findAndDeleteAction = () => {
         type: "FIND_AND_DELETE",
     };
 };
-
-export const addIdToItems = () => {
-    return {
-        type: "ADD_ID",
-    };
-};

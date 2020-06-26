@@ -1,5 +1,16 @@
 import { connect } from 'react-redux';
-import { addNewItemAction, saveAction, editAction, newNoteAction, changeTitleAction, changeDescrAction, transferAction, transferFirstNoteAction, findAndEditAction, findAndDeleteAction } from '../../actions/actions';
+import {
+    addNewItemAction,
+    saveAction,
+    editAction,
+    newNoteAction,
+    changeTitleAction,
+    changeDescrAction,
+    transferAction,
+    transferFirstNoteAction,
+    findAndEditAction,
+    findAndDeleteAction,
+} from '../../actions/actions';
 import Main from './Main';
 
 const mapStateToProps = (store) => {
@@ -21,7 +32,7 @@ const mapDispatchToProps = (dispatch) => {
         newNote: () => dispatch(newNoteAction()),
         changeDescr: (types) => dispatch(changeDescrAction(types)),
         changeTitle: (types) => dispatch(changeTitleAction(types)),
-        transferToCurrentNote: (item) => dispatch(transferAction(item), () => console.log('asd')),
+        transferToCurrentNote: (item) => dispatch(transferAction(item)),
         transferFirstNote: dispatch(transferFirstNoteAction()),
         findAndEdit: (id) => dispatch(findAndEditAction(id)),
         findAndDelete: () => dispatch(findAndDeleteAction()),

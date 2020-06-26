@@ -25,21 +25,43 @@ export default class Main extends PureComponent {
             findAndEdit,
             findAndDelete,
         } = this.props;
-        
+
         const updateNote = () => {
             if (currentNoteMode === 'edit') {
-                return <EditNote title={title} descr={descr} id={id} changeTitle={changeTitle} changeDescr={changeDescr} findAndEdit={findAndEdit}/>;
+                return (
+                    <EditNote
+                        title={title}
+                        descr={descr}
+                        id={id}
+                        changeTitle={changeTitle}
+                        changeDescr={changeDescr}
+                        findAndEdit={findAndEdit}
+                    />
+                );
             } else if (currentNoteMode === 'view') {
                 return <ViewNote title={title} descr={descr} />;
             } else if (currentNoteMode === 'new') {
-                return <NewNote title={title} descr={descr} id={id} changeTitle={changeTitle} changeDescr={changeDescr} findAndEdit={findAndEdit} />;
+                return (
+                    <NewNote
+                        title={title}
+                        descr={descr}
+                        id={id}
+                        changeTitle={changeTitle}
+                        changeDescr={changeDescr}
+                        findAndEdit={findAndEdit}
+                    />
+                );
             }
         };
 
         return (
             <div className="container-fluid">
                 <div className="row h-100">
-                    <SidePanel notes={notes} transferToCurrentNote={transferToCurrentNote} currentNoteMode={currentNoteMode} />
+                    <SidePanel
+                        notes={notes}
+                        transferToCurrentNote={transferToCurrentNote}
+                        currentNoteMode={currentNoteMode}
+                    />
                     <main className="col-md-9">
                         <div className="row">
                             <TopPanel

@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 
 export default class ButtonEditNote extends PureComponent {
     render() {
-        
         const { editNote } = this.props;
 
         return (
@@ -15,4 +14,4 @@ export default class ButtonEditNote extends PureComponent {
             </button>
         );
     }
-};
+}

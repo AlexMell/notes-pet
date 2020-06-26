@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
+
 export default class ButtonNewNote extends PureComponent {
     render() {
-
         const { newNoteEvent } = this.props;
 
         return (
