@@ -10,7 +10,7 @@ export default class NoteItem extends PureComponent {
         const noteItems = notes.map((item) => {
             return (
                 <div
-                    key={uuidv4()}
+                    key={uuidv4()} // TODO: key can be id. Id unique, isnt it?
                     id={item.id}
                     className={ItemLinkStyle}
                     onClick={() => transferToCurrentNote(item)}

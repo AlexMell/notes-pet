@@ -11,12 +11,12 @@ export default class EditNote extends PureComponent {
             changeDescr,
         } = this.props;
 
-        const typeTitle = (e) => {
+        const typeTitle = (e) => { // TODO: move to the method (out of render method)
             changeTitle(e.target.value);
             findAndEdit(id);
         };
 
-        const typeDescr = (e) => {
+        const typeDescr = (e) => { // TODO: move to the method (out of render method)
             changeDescr(e.target.value);
             findAndEdit(id);
         };

@@ -10,17 +10,18 @@ import {
     transferFirstNoteAction,
     findAndEditAction,
     findAndDeleteAction,
-} from '../../actions/actions';
+} from '../../actions';
 import Main from './Main';
+import {getIdSelector, getTitleSelector} from '../../selectors/mainSelectors';
 
 const mapStateToProps = (store) => {
     return {
         currentNoteMode: store.currentNoteMode,
         currentNoteObj: store.currentNoteObj,
         notes: store.notes,
-        title: store.currentNoteObj.title,
+        title: getTitleSelector(store),
         descr: store.currentNoteObj.descr,
-        id: store.currentNoteObj.id,
+        id: getIdSelector(store),
     };
 };
 
@@ -33,7 +34,7 @@ const mapDispatchToProps = (dispatch) => {
         changeDescr: (types) => dispatch(changeDescrAction(types)),
         changeTitle: (types) => dispatch(changeTitleAction(types)),
         transferToCurrentNote: (item) => dispatch(transferAction(item)),
-        transferFirstNote: dispatch(transferFirstNoteAction()),
+        transferFirstNote: dispatch(transferFirstNoteAction()), // TODO: move logic with immediate call to the componentDidMount
         findAndEdit: (id) => dispatch(findAndEditAction(id)),
         findAndDelete: () => dispatch(findAndDeleteAction()),
     };

@@ -17,7 +17,7 @@ export default class TopPanel extends PureComponent {
             findAndDelete,
         } = this.props;
 
-        const newNoteEvent = () => {
+        const newNoteEvent = () => { // TODO: move to the method
             newNote();
             addNewItem({
                 title: '',
@@ -31,14 +31,13 @@ export default class TopPanel extends PureComponent {
         };
 
         const updateButtons = () => {
-            if (currentNoteMode === 'edit') {
+            if (currentNoteMode === 'edit') { // TODO: switch case
                 return (
                     <div className="d-flex w-100">
                         <ButtonSaveNote
                             currentNoteObj={currentNoteObj}
                             saveNote={saveNote}
                         />
-                        <ButtonDeleteNote deleteNote={deleteNote} />
                     </div>
                 );
             } else if (currentNoteMode === 'view') {
@@ -56,7 +55,6 @@ export default class TopPanel extends PureComponent {
                             currentNoteObj={currentNoteObj}
                             saveNote={saveNote}
                         />
-                        <ButtonDeleteNote deleteNote={deleteNote} />
                     </div>
                 );
             }

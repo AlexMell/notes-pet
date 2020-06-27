@@ -84,7 +84,7 @@ const reducer = (state = store, action) => {
             };
 
         case 'FIND_AND_DELETE':
-            const array = state.notes; // make a separate copy of the array
+            const array = [...state.notes]; // make a separate copy of the array
             const idNote = state.currentNoteObj.id;
             const findNote = state.notes.find((item) => item.id === idNote);
             const index = array.indexOf(findNote);
@@ -95,8 +95,8 @@ const reducer = (state = store, action) => {
 
             return {
                 ...state,
-                notes: [...array],
-                currentNoteObj: state.notes[0],
+                notes: array,
+                currentNoteObj: state.notes[0] || {},
             };
 
         case 'CHANGE_DESCR':

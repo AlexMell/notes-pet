@@ -26,8 +26,8 @@ export default class Main extends PureComponent {
             findAndDelete,
         } = this.props;
 
-        const updateNote = () => {
-            if (currentNoteMode === 'edit') {
+        const updateNote = () => { // TODO: move to the method (out of render method)
+            if (currentNoteMode === 'edit') { // TODO: use switch case
                 return (
                     <EditNote
                         title={title}
